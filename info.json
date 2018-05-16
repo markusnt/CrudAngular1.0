@@ -1,0 +1,20 @@
+{
+    "option": [
+    {
+      "id": 1,
+      "title": "Nunca operei"
+    },
+    {
+      "id": 2,
+      "title": "Opero pouco e não tenho familiaridade"
+    },
+    {
+      "id": 3,
+      "title": "Opero eventualmente e conheço os riscos associados"
+    },
+    {
+      "id": 4,
+      "title": "Opero frequentemente e conheço os riscos associados"
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+<div style="text-align:center">
+<h4>PERFIL DO INVESTIDOR - QUESTIONÁRIO</h4>
+<br><br>
+<p>1 - Qual e o seu comportamento em relacao aos seus investimentos?</p>
+
+<br>
+
+<form class="form-inline">
+
+  <div class="form-check">
+      <input class="form-check-input" name="group" type="radio" id="s/risco" checked="checked">
+      <label class="form-check-label" for="s/risco">Preservar meu dinheiro<br>sem correr riscos</label>
+  </div>
+
+  <div class="form-check">
+      <input class="form-check-input" name="group" type="radio" id="c/risco">
+      <label class="form-check-label" for="c/risco">Ganhar mais dinheiro,<br>assumindo riscos moderados</label>
+  </div>
+
+  <div class="form-check">
+      <input class="form-check-input" name="group" type="radio" id="cm/risco">
+      <label class="form-check-label" for="cm/risco">Ganhar mais dinheiro,<br>assumindo risco agressivos</label>
+  </div>
+
+</form>
+<hr>
+<p>2 - Por quanto tempo voce deseja manter os seus investimentos?</p>
+
+<br>
+
+<form class="form-inline">
+
+  <div class="form-check">
+      <input class="form-check-input" name="group" type="radio" id="1ano" checked="checked">
+      <label class="form-check-label" for="s/risco">Ate 1 ano</label>
+  </div>
+
+  <div class="form-check">
+      <input class="form-check-input" name="group" type="radio" id="1a3anos">
+      <label class="form-check-label" for="c/risco">De 1 a 3 anos</label>
+  </div>
+
+  <div class="form-check">
+      <input class="form-check-input" name="group" type="radio" id="3a5anos">
+      <label class="form-check-label" for="cm/risco">De 3 a 5 anos</label>
+  </div>
+
+</form>
+<hr>
+<p>3 - Quantos % desse investimento voce pode precisar em um ano?</p>
+
+<br>
+
+<form class="form-inline">
+
+  <div class="form-check">
+      <input class="form-check-input" name="group" type="radio" id="ate75" checked="checked">
+      <label class="form-check-label" for="s/risco">Acima de 75%</label>
+  </div>
+
+  <div class="form-check">
+      <input class="form-check-input" name="group" type="radio" id="26-74">
+      <label class="form-check-label" for="c/risco">De 26% a 74%</label>
+  </div>
+
+  <div class="form-check">
+      <input class="form-check-input" name="group" type="radio" id="ate25">
+      <label class="form-check-label" for="cm/risco">Ate 25%</label>
+  </div>
+
+</form>
+<hr>
+<p>4 - Qual sua familiaridade com os tipos de investimento abaixo?<br>
+       Leve em consideracao o valor aplicado nos ultimos 2 anos ?</p>
+
+<br>
+</div>
+
+<p>Titulos de renda fixa ou tesouro direto</p>
+<select placeholder="Selecione uma opcao" ngModel required>
+  <option *ngFor="let option of optionList" [ngValue]="op1">{{ option.title }}</option>
+</select>
+<br>
+<br>
+
+<p>Fundos de investimento</p>
+<select placeholder="Selecione uma opcao" ngModel required>
+    <option *ngFor="let option of optionList" [ngValue]="op2">{{ option.title }}</option>
+</select>
+<br>
+<br>
+<p>Ações a vista</p>
+<select placeholder="Selecione uma opcao" ngModel required>>
+    <option *ngFor="let option of optionList" [ngValue]="op3">{{ option.title }}</option>
+</select>
+<br>
+<br>
+<p>Aluguel de ações, termos, opções e futuros</p>
+<select placeholder="Selecione uma opcao" ngModel required>
+      <option *ngFor="let option of optionList" [ngValue]="op4">{{ option.title }}</option>
+</select>
+<br>
+<br>
+
+<div style="text-align:right">
+<form #TermoForm="ngForm" (ngSubmit)="submit(TermoForm.value)">
+    <br>
+    <button class="btn btn-secondary" routerLink="/">Voltar</button>
+    <button  type="submit" class="btn btn-secondary" routerLink="/end" data-dismiss="modal" [disabled]="TermoForm.invalid">
+        Salvar
+    </button>
+</form>
+</div>

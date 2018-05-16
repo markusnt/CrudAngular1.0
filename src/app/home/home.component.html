@@ -1,0 +1,54 @@
+<div style="text-align:center">
+    <img width="100" alt="Fomulario" src="/assets/imagens/paper.png">
+    <br>
+    <br>
+    <h4> INFORMAÇÕES RECEBIDAS! </h4>
+
+    <p>Em até 48h daremos um retorno sobre a abertura de sua conta.</p>
+
+    <p>Para receber nossas recomendações de investimentos e começar a investir,
+    <br>precisamos conhecer seu perfil de investidor.
+    </p>
+
+    <p>São apenas 4 perguntas, que irão guiar todas as suas decisões de invertimentos.</p>
+    <br>
+
+    <p>Gostaria de responder ao Perfil do investidor?</p>
+
+    <button class="btn btn-secondary" data-toggle="modal" data-target="#ModalCenter">NÃO</button>
+    <button class="btn btn-secondary" routerLink="/lista">SIM</button>
+  </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="ModalCenter" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p style="text-align:center">TERMO</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Quisque vitae scelerisque elit.
+            Cras fermentum mauris arcu, vitae laoreet erat blandit vel.
+            Pellentesque convallis cursus augue et accumsan.
+            Etiam gravida tortor rutrum tempor posuere.
+            Quisque quis placerat dolor.
+            Mauris in enim ultricies, pellentesque purus ac, semper neque. </p>
+        </div>
+        <div style="text-align:center">
+            <form #TermoForm="ngForm" (ngSubmit)="submit(TermoForm.value)">
+                <input type="checkbox" name="termos" ngModel required>Li e aceito os termos e condições acima
+                <br>
+                <button  type="submit" class="btn btn-secondary" routerLink="/lista" data-dismiss="modal" [disabled]="TermoForm.invalid">
+                    OK,ENTENDI
+                </button>
+            </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
